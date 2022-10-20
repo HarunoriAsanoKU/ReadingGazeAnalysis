@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+視線データファイル形式サンプル
+
+本xmlファイルでは以下の項目をプログラム側に指示しています．
+・計測データはEOGで取るか，webカメラで取るか
+・計測データの保存形式
+・被験者に提示する問題
+
+また，本xmlファイルでは以下の項目をプログラム側から受け取ります．
+・被験者の問題回答結果
+・被験者の眼球運動データの解析結果
+-->
+<reading>
+  <!--計測する視線データの種類について指示しています-->
+  <config>
+    <gazedata>
+      <eogdata>1</eogdata>
+      <webcamdata>1</webcamdata>
+      <eogfile>0727_2022_01.csv</eogfile>
+      <webcamfile>0727_2022_01.avi</webcamfile>
+    </gazedata>
+  </config>
+  <!--被験者に提示する問題を指示しています-->
+  <questions>
+    <question>
+      <txt>ほとんどの植物(しょくぶつ)は、花をさかせ、花(か)ふんのついた、めしべの子(し)ぼうがふくらんで実(み)になります。
+	  
+	  
+	  そして、実(み)の中には種(たね)ができます。植物(しょくぶつ)がなかまを新(あたら)しい場所(ばしょ)にひろげることができるのは
+	  
+	  
+	  、種(たね)ができるときです。</txt>
+      <q no="1" name="係り受け">
+        <txt>植物(しょくぶつ)は何で新(あたら)しい場所(ばしょ)にひろがってゆきますか。</txt>
+        <select answer="1">種</select>
+        <select answer="2">花</select>
+        <select answer="3">花ふん</select>
+        <select answer="4">めしべ</select>
+        <trueanswer no="1">1</trueanswer>
+      </q>
+      <q no="2" name="照応">
+        <txt>植物(しょくぶつ)の花のなかで、実(み)になるところはどこですか。</txt>
+        <select answer="1">子ぼう</select>
+        <select answer="2">花ふん</select>
+        <select answer="3">種</select>
+        <select answer="4">花</select>
+        <trueanswer no="1">1</trueanswer>
+      </q>
+      <q no="3" name="具体例同定">
+        <txt>花のなかにあるものをえらんでください。</txt>
+        <select answer="1">子ぼう</select>
+        <select answer="2">花ふん</select>
+        <select answer="3">種</select>
+        <select answer="4">めしべ</select>
+        <trueanswer no="1">1</trueanswer>
+        <trueanswer no="2">2</trueanswer>
+        <trueanswer no="3">4</trueanswer>
+      </q>
+      <q no="4" name="同義文判定">
+        <txt>つぎの二つのぶんしょうは同じ内容ですか。
+		
+ ・植物(しょくぶつ)は種(たね)で新(あたら)しい場所(ばしょ)にひろがってゆきます。
+ 
+ ・種(たね)ができなくても、植物(しょくぶつ)は新(あたら)しい場所(ばしょ)に、すぐにひろがってゆきます。</txt>
+        <select answer="1">正しい</select>
+        <select answer="2">まちがい</select>
+        <trueanswer no="1">2</trueanswer>
+      </q>
+      <q no="5" name="推理">
+        <txt>つぎのぶんしょうは正しいですか。
+		
+		
+・植物(しょくぶつ)は新(あたら)しい場所(ばしょ)にひろがることはできません。</txt>
+        <select answer="1">正しい</select>
+        <select answer="2">まちがい</select>
+        <select answer="3">はんだんできない</select>
+        <trueanswer no="1">2</trueanswer>
+      </q>
+    </question>
+  </questions>
+  <u_answers>
+    <u_answer no="1">
+      <u_select>1</u_select>
+      <true_false />
+    </u_answer>
+    <u_answer no="2">
+      <u_select>1</u_select>
+      <true_false />
+    </u_answer>
+    <u_answer no="3">
+      <u_select>4</u_select>
+      <true_false />
+    </u_answer>
+    <u_answer no="4">
+      <u_select>2</u_select>
+      <true_false />
+    </u_answer>
+    <u_answer no="5">
+      <u_select>2</u_select>
+      <true_false />
+    </u_answer>
+  </u_answers>
+</reading>
